@@ -35,7 +35,9 @@ def lookup(name: str) -> str:
         )
     ]
 
-    react_prompt = hub.pull("hwchase17/react")  # https://smith.langchain.com/hub/hwchase17/react
+    react_prompt = hub.pull(
+        "hwchase17/react"
+    )  # https://smith.langchain.com/hub/hwchase17/react
     agent = create_react_agent(llm=llm, tools=tools_for_agent, prompt=react_prompt)
     agent_executor = AgentExecutor(agent=agent, tools=tools_for_agent, verbose=True)
 
@@ -54,5 +56,5 @@ if __name__ == "__main__":
 
 
 # I had issues with function -> func. And I did not install all teh required packages such as langchainhub
-# the blue text in result is the actual answer returned. 
-# does not work for Andrea Aduna. - returns somebody else. However Poppy Kids solidies the search. 
+# the blue text in result is the actual answer returned.
+# does not work for Andrea Aduna. - returns somebody else. However Poppy Kids solidies the search.
