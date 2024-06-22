@@ -1,11 +1,10 @@
 from langchain.prompts.prompt import PromptTemplate
 from langchain_openai import ChatOpenAI
+from third_parties.linkedin import scrape_linkedin_profile
 
 
 from dotenv import load_dotenv
-import os
 
-from third_parties.linkedin import scrape_linkedin_profile
 
 if __name__ == "__main__":
     load_dotenv()
