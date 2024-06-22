@@ -17,4 +17,3 @@ print(config)
 
 # Access individual keys
 print(config["MYSECRET_KEY"])
-
