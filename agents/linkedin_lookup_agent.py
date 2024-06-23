@@ -1,6 +1,6 @@
 from dotenv import load_dotenv
-import os
 
+load_dotenv()
 from langchain.prompts.prompt import PromptTemplate
 from langchain_openai import ChatOpenAI
 from langchain_core.tools import Tool  # Import tool for langchain agent.
@@ -11,7 +11,7 @@ from langchain.agents import (
 from langchain import hub  # premade prompts from the community
 from tools.tools import get_profile_url_tavily
 
-load_dotenv()
+
 
 
 def lookup(name: str) -> str:
@@ -50,9 +50,10 @@ def lookup(name: str) -> str:
 
 
 if __name__ == "__main__":
-    linkedin_url = lookup(name="Andrea Aduna Poppy")
-    # linkedin_url = lookup(name="Poppy Kids Pediatric Dentistry")
-    print(linkedin_url)
+    # linkedin_url = lookup(name="Andrea Aduna Poppy")
+    # # linkedin_url = lookup(name="Poppy Kids Pediatric Dentistry")
+    # print(linkedin_url)
+    print(lookup(name="Eden Marco Udemy"))
 
 
 # I had issues with function -> func. And I did not install all teh required packages such as langchainhub
